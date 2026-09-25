@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/south-africa-tenders",
   "title": "South Africa Tenders",
   "description": "South Africa Government Procurement MCP — National Treasury eTenders / OCPO (keyless).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/south-africa-tenders",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-south-africa-tenders",
