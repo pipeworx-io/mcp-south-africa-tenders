@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-south-africa-tenders",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "South Africa Government Procurement MCP — National Treasury eTenders / OCPO (keyless).",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-south-africa-tenders": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "south-africa-tenders"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-south-africa-tenders.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/south-africa-tenders",
   "pipeworx": {
-    "sourceHash": "v1-189dcbfd111d5d863a7a75cec483f8d457a9b0b0724585714e9a733d737fb04c",
-    "sourceCommit": "d4a9636716f113458bd312e487c065f76548df8c"
+    "mode": "gateway",
+    "slug": "south-africa-tenders",
+    "gatewaySlug": "south-africa-tenders",
+    "sourceHash": "v1-e664c9901a3660a55248c66c575fb66d0802cdc75dbf70c06f7ccf772c03a3a1",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }

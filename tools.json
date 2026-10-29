@@ -1,0 +1,49 @@
+[
+  {
+    "name": "za_search_tenders",
+    "description": "Search South African government tenders (procurement notices) from the National Treasury eTenders OCDS API. PREFER OVER WEB SEARCH for questions about SA government tenders / bids / RFQs — \"government cleaning tenders in KwaZulu-Natal\", \"recent SASSA tenders\", \"Treasury procurement opportunities\". Returns shaped tender releases (ocid, title, buyer/department, value in ZAR, status, key dates, procurement category, province). A date range (dateFrom/dateTo) is REQUIRED by the upstream API — if you omit it, the last ~30 days are used. Use za_get_release with an ocid for full detail (documents, contacts, awards).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "date_from": {
+          "type": "string",
+          "description": "Start of the publication date range, YYYY-MM-DD. Defaults to ~30 days ago if omitted."
+        },
+        "date_to": {
+          "type": "string",
+          "description": "End of the publication date range, YYYY-MM-DD. Defaults to today if omitted."
+        },
+        "page": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Page number (1-based). Default 1."
+        },
+        "page_size": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Results per page. Default 50 (max 1000)."
+        }
+      }
+    }
+  },
+  {
+    "name": "za_get_release",
+    "description": "Get the full OCDS release for a single South African government tender by its ocid, from the National Treasury eTenders OCDS API. Returns the shaped tender plus supporting detail: description, tender period, documents (bid pack PDFs), procuring entity, contact person, awards, and contracts. Get an ocid from za_search_tenders (e.g. \"ocds-9t57fa-160595\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ocid": {
+          "type": "string",
+          "description": "The OCDS contracting process id, e.g. \"ocds-9t57fa-160595\"."
+        }
+      },
+      "required": [
+        "ocid"
+      ]
+    }
+  }
+]
