@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-south-africa-tenders",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "South Africa Government Procurement MCP — National Treasury eTenders / OCPO (keyless).",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "south-africa-tenders",
     "gatewaySlug": "south-africa-tenders",
-    "sourceHash": "v1-e664c9901a3660a55248c66c575fb66d0802cdc75dbf70c06f7ccf772c03a3a1",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-1411a02f8ac13799a74ad377444d74d9b5aa1c599aaa85d55754a317a7e7f7da",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
